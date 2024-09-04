@@ -255,14 +255,14 @@ body {
     padding: 5px 10px;
     border: 1px solid #ddd;
     border-left: none;
-    background-color: #007bff;
+    background-color: black;
     color: white;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
 }
 
 #search-form button:hover {
-    background-color: #0056b3;
+    background-color: #a3a3a3;
 }
 
 /* #search-form-container {
@@ -277,11 +277,18 @@ body {
 
     .product-item {
         padding: 10px; /* Ajuste del padding para adaptarse a pantallas más pequeñas */
+        height: auto;
     }
+
+    .product-item img {
+        max-width: 100%;
+        height: auto;
+      }
 
     .header, .top-bar {
         flex-direction: column;
         text-align: center;
+        max-width: 100%;
     }
 
     .navigation ul {
