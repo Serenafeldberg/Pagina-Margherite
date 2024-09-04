@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .controls {
+            margin-top: 10px;
+        }
+        .controls button {
+            font-size: 16px;
+            padding: 5px 10px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+        .quantity {
+            display: inline-block;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Bloque fijo en la parte superior -->
+    <div class="fixed-header">
+        <!-- Barra superior -->
+        <div class="top-bar">
+            6 CUOTAS SIN INTERÉS - 15% OFF CON TRANSFERENCIA
+        </div>
+
+        <!-- Nombre "Margherita" que redirige al inicio -->
+        <div class="brand-name">
+            <a href="index.html">Margherite</a>
+        </div>
+
+        <!-- Menú de Navegación -->
+        <header class="header">
+            <div class="logo">
+                <h1>Perfumería & Aromas</h1>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#intro">Novedades</a></li>
+                    <li><a href="#shop">Productos</a></li>
+                    <li><a href="#about">Sobre Nosotros</a></li>
+                    <li><a href="#info">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="#" id="search-icon"><i class="fas fa-search"></i></a>
+                <!-- Formulario de búsqueda oculto -->
+                <div id="search-form-container" style="display: none; position: fixed; top: 50px; right: 20px; background: white; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                    <form id="search-form">
+                        <input type="text" id="search-input" placeholder="Buscar productos...">
+                        <button type="submit" id="search-button">Buscar</button>
+                    </form>
+                </div>
+            </div>
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</a>
+            </div>
+        </header>
+    </div>
+
+    <!-- Nombre "Margherita" que redirige al inicio
+    <div class="brand-name">
+        <a href="index.html">Margherita</a>
+    </div> -->
+
+    <header class="header">
+        <div class="logo">
+            <h1>Carrito de Compras</h1>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Volver a la Tienda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección del Carrito -->
+    <section id="cart-section">
+        <h2>Tu Carrito</h2>
+        <div id="cart-items">
+            <!-- Aquí se insertarán los productos del carrito -->
+        </div>
+        <div class="cart-total">
+            <h3>Total: $<span id="cart-total">0</span></h3>
+        </div>
+    </section>
+
+    <!-- Sección para suscribirse a novedades -->
+    <section id="subscribe">
+        <h2>Suscríbete a Novedades</h2>
+        <form id="subscription-form">
+            <input type="email" id="email" name="email" placeholder="Introduce tu correo electrónico" required>
+            <button type="submit">Suscribirse</button>
+        </form>
+    </section>
+
+    <!-- Sección de Instagram -->
+    <section id="instagram" style="background-color: #333; color: white; text-align: center; padding: 20px;">
+        <h3>Síguenos en Instagram</h3>
+        <a href="https://www.instagram.com/margherite.esencias/" target="_blank" style="color: #C0C0C0; text-decoration: none; font-size: 18px;">@margherite.esencias</a>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>

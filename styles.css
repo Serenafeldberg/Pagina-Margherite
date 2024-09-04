@@ -1,0 +1,270 @@
+/* Estilos generales */
+body {
+    font-family: 'Inconsolata', monospace;
+    margin: 0;
+    padding: 0;
+}
+
+/* Bloque fijo en la parte superior */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white; /* Fondo blanco para coincidir con el estilo */
+    z-index: 1000; /* Asegura que quede encima del contenido */
+}
+
+/* Ajuste de la parte superior del contenido principal para evitar que quede oculto */
+body {
+    margin-top: 130px; /* Ajusta este valor según la altura combinada de .top-bar y .header */
+}
+
+.top-bar {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 7px 0;
+    font-size: 12px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation ul li {
+    display: inline;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.user-actions a {
+    text-decoration: none;
+    color: black;
+    margin-left: 15px;
+    font-size: 16px;
+}
+
+.user-actions a:hover,
+.navigation ul li a:hover {
+    text-decoration: underline;
+}
+
+#intro {
+    padding: 50px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+#intro h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#intro p {
+    font-size: 18px;
+}
+
+/* Estilos de la cuadrícula de productos */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-item h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-item p {
+    font-size: 16px;
+    color: #333;
+}
+
+.product-item button {
+    background-color: #DCDCDC;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.product-item button:hover {
+    background-color: #808080;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Alinea los elementos al inicio y al final */
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.cart-item-details {
+    flex: 1;
+    text-align: left; /* Asegura que los detalles estén alineados a la izquierda */
+}
+
+.cart-item-controls {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Asegura que este contenedor esté a la derecha */
+}
+
+
+/* Estilo para el nombre "Margherita" */
+.brand-name {
+    text-align: center;
+    margin: 0; /* Asegura que no haya margen adicional */
+}
+
+.brand-name a {
+    text-decoration: none;
+    font-size: 24px;
+    color: black;
+    font-weight: bold;
+}
+
+.brand-name a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para la sección de suscripción */
+#subscribe {
+    padding: 50px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+#subscribe form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#subscribe input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#subscribe button {
+    background-color: #DCDCDC;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#subscribe button:hover {
+    background-color: #808080;
+}
+
+/* Estilos para la sección de Instagram */
+#instagram {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+#instagram a {
+    color: #f4a460;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#instagram a:hover {
+    text-decoration: underline;
+}
+
+.user-actions a {
+    text-decoration: none;
+    color: black;
+    margin-left: 15px;
+    font-size: 20px; /* Ajusta el tamaño del ícono aquí */
+}
+
+.user-actions a:hover {
+    color: #007bff; /* Color al pasar el mouse */
+}
+
+.user-actions i {
+    font-size: 20px; /* Tamaño del ícono */
+}
+
+/* Estilos para el formulario de búsqueda */
+#search-form {
+    display: flex;
+    align-items: center;
+}
+
+#search-input {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+#search-form button {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-left: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+#search-form button:hover {
+    background-color: #0056b3;
+}
+
+/* #search-form-container {
+    display: none;
+} */
