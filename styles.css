@@ -268,3 +268,54 @@ body {
 /* #search-form-container {
     display: none;
 } */
+
+/* Media query para pantallas pequeñas (celulares) */
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* Cambia a dos columnas en dispositivos móviles */
+    }
+
+    .product-item {
+        padding: 10px; /* Ajuste del padding para adaptarse a pantallas más pequeñas */
+    }
+
+    .header, .top-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .user-actions {
+        margin-top: 10px;
+    }
+
+    /* Ajustar el buscador para pantallas móviles */
+    #search-form {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #search-input {
+        width: 100%; /* Ocupa todo el ancho del contenedor */
+        margin-bottom: 5px;
+    }
+
+    #search-form button {
+        width: 100%; /* Botón a pantalla completa en móvil */
+    }
+
+    .cart-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cart-item img {
+        width: 80px;
+        height: auto;
+    }
+}
+
