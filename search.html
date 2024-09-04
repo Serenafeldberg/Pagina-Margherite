@@ -3,24 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de Compras</title>
+    <title>Perfumería & Aromas</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        .controls {
-            margin-top: 10px;
-        }
-        .controls button {
-            font-size: 16px;
-            padding: 5px 10px;
-            margin-right: 5px;
-            cursor: pointer;
-        }
-        .quantity {
-            display: inline-block;
-            margin: 0 10px;
-        }
-    </style>
+
 </head>
 <body>
     <!-- Bloque fijo en la parte superior -->
@@ -61,49 +48,12 @@
             </div>
         </header>
     </div>
-
-    <!-- Nombre "Margherita" que redirige al inicio
-    <div class="brand-name">
-        <a href="index.html">Margherita</a>
-    </div> -->
-
-    <header class="header">
-        <div class="logo">
-            <h1>Carrito de Compras</h1>
-        </div>
-        <nav class="navigation">
-            <ul>
-                <li><a href="index.html">Volver a la Tienda</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Sección del Carrito -->
-    <section id="cart-section">
-        <h2>Tu Carrito</h2>
-        <div id="cart-items">
-            <!-- Aquí se insertarán los productos del carrito -->
-        </div>
-        <div class="cart-total">
-            <h3>Total: $<span id="cart-total">0</span></h3>
-        </div>
+    <!-- Sección de resultados de búsqueda -->
+    <section id="search-results">
+        <h2>Resultados de Búsqueda</h2>
+        <div id="results-container"></div>
     </section>
 
-    <!-- Sección para suscribirse a novedades -->
-    <section id="subscribe">
-        <h2>Suscríbete a Novedades</h2>
-        <form id="subscription-form">
-            <input type="email" id="email" name="email" placeholder="Introduce tu correo electrónico" required>
-            <button type="submit">Suscribirse</button>
-        </form>
-    </section>
-
-    <!-- Sección de Instagram -->
-    <section id="instagram" style="background-color: #333; color: white; text-align: center; padding: 20px;">
-        <h3>Síguenos en Instagram</h3>
-        <a href="https://www.instagram.com/margherite.esencias/" target="_blank" style="color: #C0C0C0; text-decoration: none; font-size: 18px;">@margherite.esencias</a>
-    </section>
-    
     <script src="script.js"></script>
 </body>
 </html>

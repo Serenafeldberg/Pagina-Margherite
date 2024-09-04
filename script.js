@@ -131,25 +131,51 @@ function updateQuantity(productName, change) {
     }
 }
 
-
-
-
-// Llamar a updateCart al cargar la página para mostrar el estado actual del carrito
-updateCart();
-
 // Función para manejar el formulario de búsqueda
-// function search(event) {
-//     event.preventDefault(); // Prevenir el envío del formulario por defecto
+document.getElementById('search-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const searchInput = document.getElementById('search-input').value.toLowerCase();
+    window.location.href = `search.html?q=${encodeURIComponent(searchInput)}`;
+});
 
-//     const searchInput = document.getElementById('search-input').value.toLowerCase();
-    
-//     // Aquí debes agregar la lógica para realizar la búsqueda real
-//     // Por ejemplo, podrías buscar en una base de datos o filtrar productos en la página
-//     console.log('Buscar:', searchInput);
+// Mostrar los resultados de búsqueda en la página de resultados
+document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('q');
+    const resultsContainer = document.getElementById('results-container');
 
-//     // Ejemplo: Redireccionar a una página de resultados de búsqueda (puedes ajustar esto según tus necesidades)
-//     window.location.href = `search.html?q=${encodeURIComponent(searchInput)}`;
-// }
+    if (query && resultsContainer) {
+        const filteredProducts = filterProducts(query);
+
+        if (filteredProducts.length > 0) {
+            filteredProducts.forEach(product => {
+                const productElement = document.createElement('div');
+                productElement.classList.add('product-item');
+                productElement.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}">
+                    <h3>${product.name}</h3>
+                    <p>$${product.price}</p>
+                    <button onclick="addToCart('${product.name}', ${product.price}, '${product.image}')">Agregar al carrito</button>
+                `;
+                resultsContainer.appendChild(productElement);
+            });
+        } else {
+            resultsContainer.innerHTML = `<p>No se encontraron los productos</p>`;
+        }
+    }
+});
+
+// Función que filtra los productos basados en el término de búsqueda
+function filterProducts(query) {
+    const allProducts = [
+      { name: 'Vela de Lavanda', price: 3000, image: 'imgs/img1.png' },
+      { name: 'Aromatizante Floral', price: 6000, image: 'imgs/img1.png' },
+      { name: 'Jabón Artesanal', price: 2000, image: 'imgs/img1.png' },
+      { name: 'Vela de Vainilla', price: 3000, image: 'imgs/img1.png' }
+    ];
+  
+    return allProducts.filter(product => product.name.toLowerCase().includes(query.toLowerCase()));
+  }
 
 // Función para manejar la suscripción
 function subscribe(event) {
@@ -168,3 +194,5 @@ function subscribe(event) {
     document.getElementById('subscribe-email').value = '';
 }
 
+// Llamar a updateCart al cargar la página para mostrar el estado actual del carrito
+updateCart();
